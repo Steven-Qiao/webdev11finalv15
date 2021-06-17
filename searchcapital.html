@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	
+		<title>World Nations Information Repository</title>
+	
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<meta name="theme-color" content="#90d7ff" />
+
+		<meta name="description" content="Put your description here." />
+	   
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+		
+		<link rel="apple-touch-icon" href="/icons">
+		
+		<link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="icon" type="image/png" href="icons/favicon.png">
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="myscript.js"></script>
+		
+		
+	</head>
+  
+	<body>
+	
+		<div class="contentwrapper">
+	
+			<ul id="nav">
+				<li id="navicon">
+					<i class="fa fa-globe"></i>
+				</li>
+				
+				<li class="navlistitem">
+					<a href="index.html">Home</a>
+				</li>
+				
+				<li class="navlistitem">
+					<a href="searchlang.html">Search by Language</a>
+				</li>
+				
+				<li class="navlistitem">
+					<a href="searchcapital.html">Search by Capital City</a>
+				</li>
+				
+				<li class="navlistitem">
+					<a href="searchcode.html">Search by Alpha Code</a>
+				</li>
+				
+				<li class="navlistitem">
+					<a href="searchbloc.html">Search by Organization</a>
+				</li>
+				
+			</ul>
+		
+		
+		
+			<div id="searchdiv" class="capitalsearchdiv">
+			
+				<h1>Search Countries by Capital City</h1>
+				
+				<label for="search2">Please insert the name of the capital city below</label> 
+				
+				<br />
+			
+				<input type="text" id="search2" placeholder="Search Country by Capital">
+				
+				<button id="button3" onclick="fetchCapital()">
+					&#128269; Find Country
+				</button>
+				
+				<div id="hintmsg"></div>
+			
+			</div>
+			
+			<div id="main">
+				
+			</div>
+			
+			<div id="footer">
+			
+				<div id="lfooter">
+				
+					<h2 class="footerheading">World Nations Information Repository</h2>
+					
+					<p>
+						&#169; 2021 World Nations Information Repository <br /> <br />
+						
+						This script uses a fetch request to get geographical Data from a free api called 
+						<a href="http://restcountries.eu/" class="footerurl">restcountries.eu</a>
+						
+						Furthermore, a big thank you to <a href="https://www.flaticon.com/authors/prettycons" title="prettycons" class="footerurl">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="footerurl">www.flaticon.com</a> for making our amazing icon possible
+						
+						<br />
+						<br />
+						
+						This is a school project produced by Mount Doug student, and it covers a variety of topics such as web designs (with CSS and HTML), APIs, and programming using JavaScript.
+					</p>
+				</div>
+				
+				<div id="rfooter">
+				
+					<h2 class="footerheading">About Us</h2>
+				
+					This is a progressive web app containing comprenhensive information of 250 countries in the world. <br /><br />For instance, it contains country names, population, and the Gini Index. Moreover, multiple different searches can be made: 
+					
+					<br />
+					<br />
+					
+					<ol id="footerlist">
+					
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						
+						<li>
+							<a href="searchlang.html">Search by Language</a>
+						</li>
+						
+						<li>
+							<a href="searchcapital.html">Search by Capital City</a>
+						</li>
+						
+						<li>
+							<a href="searchcode.html">Search by Alpha Code</a>
+						</li>
+						
+						<li>
+							<a href="searchbloc.html">Search by Organization</a>
+						</li>
+						
+					</ol>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+  
+</html>

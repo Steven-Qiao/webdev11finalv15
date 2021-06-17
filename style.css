@@ -1,0 +1,853 @@
+/*font-family: 'Nanum Gothic', sans-serif;*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	font-family: 'Nanum Gothic', sans-serif;
+	margin-bottom: 0;
+}
+
+#hintmsg {
+	color: #FFF;
+}
+
+
+
+
+
+/****************** grid area *********************/
+
+#searchdiv {
+	grid-area: search;
+}
+
+#main {
+	grid-area: main;
+}
+
+#footer {
+	grid-area: footer;
+}
+
+.contentwrapper {
+	display: grid;
+	grid-template: "nav" 615px "search" 700px "main" auto "footer" auto / 1fr;
+}
+
+
+/*********Navigation*************/
+
+#nav {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-area: nav;
+	top: 0px;
+	left: 0px;
+	border: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#nav li {
+	width: 100%;
+	background-color: #101935;
+	padding: 25px;
+	font-family: 'Nanum Gothic', sans-serif;
+	text-align: center
+}
+
+#nav a {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#nav li:hover {
+	cursor: pointer;
+	background-color: #274060;
+	transition: all 0.5s ease-in;
+}
+
+.fa-globe {
+	color: #FFF;
+	font-size: 12em !important;
+}
+
+#navicon:hover {
+	background-color: #101935 !important;
+	cursor: inherit !important;
+}
+
+
+/********* Country Flag****************/
+
+#flag {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	box-shadow: 0 5px 20px rgba(104, 104, 104, 0.8);
+}
+
+
+/*************** Random Flag ******************/
+
+#randomflag1,
+#randomflag2,
+#randomflag3 {
+	width: 75%;
+	height: auto;
+}
+
+
+/*********** Background images ***********/
+
+.homesearchdiv {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/hero6.jpg);
+}
+
+.langsearchdiv {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/hero3.jpg);
+}
+
+.capitalsearchdiv {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/capitalimg1.jpg);
+}
+
+.codesearchdiv {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/codeimg.jpg);
+}
+
+.blocsearchdiv {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/orgimg.jpg);
+}
+
+
+/*********** Search section ***********/
+
+label {
+	color: #FFF;
+	margin-right: 5vw;
+	margin-left: 5vw;
+	line-height: 50px;
+}
+
+#label {
+	color: #FFF;
+	margin-right: 5vw;
+	margin-left: 5vw;
+	line-height: 50px;
+}
+
+button {
+	font-family: 'Nanum Gothic', sans-serif;
+	background-color: rgba(0, 0, 0, 0);
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+
+#button1 {
+	padding: 10px;
+	font-size: 15px;
+	border-radius: 10px;
+}
+
+#button4,
+#button5 {
+	font-size: 18px;
+	border-radius: 30px;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	padding-right: 1vw;
+	padding-left: 1vw;
+}
+
+#button,
+#button2,
+#button3 {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 18px;
+	border-radius: 30px;
+}
+
+#button:hover,
+#button1:hover,
+#button2:hover,
+#button3:hover,
+#button4:hover,
+#button5:hover {
+	cursor: pointer;
+	background-color: #FFF;
+	transition: all 0.3s ease-in;
+	color: #000;
+}
+
+.homesearchdiv {
+	padding-bottom: 0;
+}
+
+.homesearchdiv,
+.langsearchdiv,
+.capitalsearchdiv,
+.blocsearchdiv,
+.codesearchdiv {
+	padding-top: 15vh;
+	margin-top: 0;
+	width: 100%;
+	display: block;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.homesearchdiv h1,
+.langsearchdiv h1,
+.capitalsearchdiv h1,
+.codesearchdiv h1,
+.blocsearchdiv h1 {
+	color: #FFF;
+	margin-top: 0;
+	font-size: 45px;
+	margin-right: 5vw;
+	margin-left: 5vw;
+}
+
+#search,
+#search1,
+#search2,
+#searchcountrycodes,
+#searchbloc {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+#search,
+#search1,
+#search2,
+#searchbloc {
+	font-size: 25px;
+	border: 1px solid #FFF;
+	border-radius: 40px;
+}
+
+#search1,
+#search2 {
+	width: 50%;
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1%;
+}
+
+#search {
+	width: 45%;
+	font-size: 25px;
+}
+
+#searchcountrycodes {
+	width: 45%;
+	border: 1px solid #FFF;
+	border-radius: 40px;
+	font-size: 25px;
+}
+
+#searchbloc {
+	width: 55%;
+	font-size: 25px;
+}
+
+#search,
+#search1,
+#search2,
+#searchbloc,
+#searchcountrycodes
+{
+	padding-left: 1vw;
+}
+
+
+/************* Main *************/
+
+.countrywrapper {
+	text-align: center;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	line-height: 35px;
+}
+
+.countrywrapper img {
+	margin: 3%;
+}
+
+.countryname 
+{
+	font-size: 50px;
+	margin-right: 7.5vw;
+	margin-left: 7.5vw;
+	line-height: 60px;
+}
+
+.langresultlist
+{
+	background-color: #FFF;
+	display: block;
+	border-radius: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	border: 1px solid #000;
+	margin-top: 7.5vh;
+	box-shadow: 15px 10px #000;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-right: 3vw;
+	padding-left: 3vw;
+	font-size: 20px;
+}
+
+.langresultlist a 
+{
+	text-decoration: none;
+	color: #589CC1;
+}
+
+.langresultlist a:hover {
+	color: #000;
+	transition: all 0.2s ease-in;
+}
+
+.langresultlist li
+{
+	margin-left: 5vw;
+}
+
+#listheading
+{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 45%;
+	font-size: 3vh;
+}
+
+
+/********************** footer ***************************/
+
+#footer {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#lfooter {
+	color: #FFF;
+	background-color: #000;
+	margin-top: 0;
+	padding-right: 1vw;
+	padding-left: 1vw;
+	padding-bottom: 5vh;
+	padding-top: 5vh;
+	height: auto;
+}
+
+#lfooter p {
+	padding-right: 12vw;
+	padding-left: 12vw;
+	padding-bottom: 0;
+}
+
+#rfooter {
+	color: #FFF;
+	background-color: #000;
+	padding-right: 10vw;
+	padding-left: 10vw;
+	padding-bottom: 1vh;
+	padding-top: 1vh;
+	height: auto;
+}
+
+#footerlist {
+	list-style: none;
+	text-align: center;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+#footerlist a,
+.footerurl {
+	text-decoration: none;
+	color: #589CC1;
+}
+
+#footerlist a:hover {
+	text-decoration: underline;
+}
+
+.footerheading {
+	font-size: 30px;
+	text-align: center;
+}
+
+#hintmsg 
+	{
+		font-size: 15px;
+		margin-right: 10vw;
+		margin-left: 10vw;
+		margin-top: 3vh;
+	}
+
+
+/************************** Media Query************************/
+
+@media only screen and (min-width: 1050px) {
+	body {
+		margin-bottom: 0;
+	}
+	.contentwrapper {
+		display: grid;
+		grid-template: "nav" auto "search" 100vh "main" auto "footer" 750px / 1fr;
+	}
+	#nav {
+		list-style: none;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 0.9fr repeat(5, 1.1fr);
+		text-align: center;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		margin: 0;
+		padding: 0;
+	}
+	#nav li {
+		background-color: #101935;
+		padding: 5px;
+		font-family: 'Nanum Gothic', sans-serif;
+	}
+	#nav a {
+		color: #FFF;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.navlistitem a {
+		padding-top: 5vh;
+		padding-right: 3vw;
+		padding-left: 3vw;
+	}
+	#nav li:hover {
+		cursor: pointer;
+		background-color: #274060;
+		transition: all 0.5s ease-in;
+	}
+	.fa-globe {
+		color: #FFF;
+		font-size: 7em !important;
+	}
+	.homesearchdiv,
+	.langsearchdiv,
+	.capitalsearchdiv,
+	.blocsearchdiv,
+	.codesearchdiv {
+		background-size: 100% 100%;
+		padding-top: 10vh;
+		margin: 0;
+		width: 100%;
+		display: block;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+	.homesearchdiv h1,
+	.langsearchdiv h1,
+	.capitalsearchdiv h1,
+	.codesearchdiv h1,
+	.blocsearchdiv h1 {
+		color: #FFF;
+		margin-top: 0;
+		font-size: 50px;
+	}
+	.langsearchdiv h1 {
+		margin-bottom: 3%;
+	}
+	#flag {
+		width: 45%;
+	}
+	#footer {}
+	#lfooter {
+		width: 50%;
+		height: 100%;
+		background-color: #000;
+		float: left;
+		color: #FFF;
+		padding-top: 5vh;
+		font-size: 20px;
+	}
+	#rfooter {
+		width: 50%;
+		height: 100%;
+		background-color: #000;
+		float: right;
+		color: #FFF;
+		text-align: center;
+		padding-top: 5vh;
+		padding-right: 5vw;
+		padding-left: 5vw;
+		font-size: 20px;
+	}
+	#footerlist li {
+		line-height: 50px;
+	}
+	.footerheading {
+		font-size: 40px !important;
+	}
+	#button1 {
+		padding: 20px;
+		font-size: 20px;
+		border-radius: 10px;
+	}
+	#button,
+	#button2,
+	#button3, 
+	#button4,
+	#button5{
+		font-size: 20px;
+		border-radius: 30px;
+		padding-top: 1.25vh;
+		padding-bottom: 1.25vh;
+		padding-right: 1vw;
+		padding-left: 1vw;
+	}
+	#button4,
+	#button5 {
+		padding-top: 1.5vh;
+		padding-bottom: 1.5vh;
+		padding-right: 1vw;
+		padding-left: 1vw;
+	}
+	#searchdiv {
+		margin-top: 120px;
+	}
+	#search,
+	#search1,
+	#search2,
+	#searchbloc {
+		font-size: 25px;
+		border: 1px solid #FFF;
+		border-radius: 40px;
+		padding-top: 1vh;
+		padding-bottom: 1vh;
+		padding-right: 1vw;
+		padding-left: 1vw;
+	}
+	#search,
+	#search1,
+	#search2 {
+		width: 45%;
+		display: inline;
+	}
+	#searchcountrycodes {
+		width: 30%;
+		border: 1px solid #FFF;
+		border-radius: 40px;
+		font-size: 25px;
+		padding-top: 1vh;
+		padding-bottom: 1vh;
+		padding-right: 1vw;
+		padding-left: 1vw;
+	}
+	#searchbloc {
+		width: 35%;
+		font-size: 25px !important;
+		display: inline;
+	}
+	
+	#button5 {
+		display: inline;
+	}
+	#hintmsg 
+	{
+		font-size: 15px;
+	}
+	
+	.countryname 
+	{
+		font-size: 50px;
+		margin-right: 15vw;
+		margin-left: 15vw;
+		line-height: 60px;
+
+	}
+	.langresultlist
+	{
+		width: 30%;
+	}
+	.langresultlist li
+	{
+		margin-left: 0.5vw;
+	}	
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+		margin-bottom: 0;
+	}
+	.contentwrapper {
+		display: grid;
+		grid-template: "nav" auto "search" 75vh "main" auto "footer" auto / 1fr;
+		margin: 0;
+	}
+	#nav a {
+		font-size: 15px;
+	}
+	#search {
+		width: 45%;
+		font-size: 20px;
+		display: inline;
+	}
+	
+	#search,
+	#search1,
+	#search2,
+	#searchbloc,
+	#searchcountrycodes
+	{
+		padding-top: 1vh;
+		padding-bottom: 1vh;
+		padding-left: 2vw;
+	}
+	
+	#search1,
+	#search2,
+	#searchbloc {
+		font-size: 25px;
+	}
+	
+	#button,
+	#button2,
+	#button3,
+	#button4,
+	#button5 {
+		
+		width: 30%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 18px;
+		padding-top: 1.5vh;
+		padding-bottom: 1.5vh;
+		padding-left: 1vw;
+		padding-right: 1vw;
+	}
+	
+	.homesearchdiv,
+	.langsearchdiv,
+	.capitalsearchdiv,
+	.blocsearchdiv,
+	.codesearchdiv {
+		background-size: cover;
+	}
+	.homesearchdiv h1,
+	.langsearchdiv h1,
+	.capitalsearchdiv h1,
+	.codesearchdiv h1,
+	.blocsearchdiv h1 {
+		color: #FFF;
+		margin-top: 0;
+		font-size: 45px;
+	}
+	#button {
+		font-size: 15px;
+	}
+	#button1 {
+		margin-top: 0;
+	}
+	#searchbloc {
+		width: 55%;
+	}
+	#hintmsg 
+	{
+		font-size: 15px;
+		margin-right: 10vw;
+		margin-left: 10vw;
+		margin-top: 3vh;
+	}
+	.countryname 
+	{
+		font-size: 40px;
+		margin-right: 5vw;
+		margin-left: 5vw;
+		line-height: 50px;
+	}
+	.langresultlist
+	{
+		width: 35%;
+	}
+	.langresultlist li
+	{
+		margin-left: 5vw;
+	}	
+}
+
+@media only screen and (max-width: 590px) {
+	html,
+	body {
+		overflow-x: hidden;
+	}
+	body {
+		margin-bottom: 0;
+	}
+	.contentwrapper {
+		display: grid;
+		grid-template: "nav" auto "search" 100vh "main" auto "footer" auto / 1fr;
+	}
+	#nav a {
+		font-size: 15px;
+	}
+	
+	#search,
+	#search1,
+	#search2,
+	#searchbloc,
+	#searchcountrycodes
+	{
+		padding-top: 1vh;
+		padding-bottom: 1vh;
+		padding-left: 2vw;
+	}
+	
+	#search1,
+	#search2,
+	#search3,
+	#searchbloc
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#search {
+		width: 70%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 3vh;
+	}
+	#search1 {
+		width: 60%;
+
+	}
+	#search2 {
+		width: 60%;
+	}
+	#search,
+	#search1,
+	#search2,
+	#searchbloc {
+		font-size: 20px;
+	}
+	#searchbloc {
+		width: 75%;
+	}
+	#searchcountrycodes
+	{
+		width: 55%;
+		font-size: 20px;
+	}
+	.homesearchdiv h1,
+	.langsearchdiv h1,
+	.capitalsearchdiv h1,
+	.codesearchdiv h1,
+	.blocsearchdiv h1 {
+		color: #FFF;
+		margin-top: 0;
+		font-size: 35px;
+	}
+	
+	#button,
+	#button2,
+	#button3,
+	#button4,
+	#button5 {
+		display: block;
+		width: 45%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 15px;
+	}
+	
+	#button
+	{
+		padding-bottom: 2vh;
+		padding-top: 2vh;
+	}
+	
+	#button1
+	{
+		margin-top: 5vh;
+	}
+	
+	#button2,
+	#button3
+	{
+		margin-top: 5vh;
+		padding-bottom: 2vh;
+		padding-top: 2vh;
+	}
+	
+	#button4
+	{
+		padding: 2vh;
+	}
+	
+	#button4,
+	#button5
+	{
+		margin-top: 5vh;
+		
+	}
+	
+	label,
+	#label {
+		font-size: 12px;
+	}
+	
+	#hintmsg 
+	{
+		font-size: 12px;
+		margin-right: 10vw;
+		margin-left: 10vw;
+		margin-top: 3vh;
+	}
+	
+	.countryname 
+	{
+		font-size: 30px;
+		margin-right: 5vw;
+		margin-left: 5vw;
+		line-height: 40px;
+	}
+	
+	.langresultlist
+	{
+		width: 55%;
+		font-size: 15px;
+	}
+	.langresultlist li
+	{
+		margin-left: 10vw;
+	}
+}
+
